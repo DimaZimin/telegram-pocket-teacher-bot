@@ -1,8 +1,12 @@
 import telebot
 from bs4 import BeautifulSoup
 import requests
+import json
 
-API_TOKEN = '1150644309:AAF_fAyfPbV2jZKbg9Y0oEqi8oZhMXlHMaM'
+with open('token.json') as json_file:
+    token = json.load(json_file)
+
+API_TOKEN = token['API_TOKEN']
 
 bot = telebot.TeleBot(API_TOKEN)
 
