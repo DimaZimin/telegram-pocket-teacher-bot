@@ -3,7 +3,7 @@ from telegram.ext import Updater
 import logging
 from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
-from beautiful_soup_proj import ad_generator
+from olx_apartments_scraper.beautiful_soup_proj import ad_generator
 
 bot = telegram.Bot(token='1150644309:AAF_fAyfPbV2jZKbg9Y0oEqi8oZhMXlHMaM')
 updater = Updater(token='1150644309:AAF_fAyfPbV2jZKbg9Y0oEqi8oZhMXlHMaM', use_context=True)

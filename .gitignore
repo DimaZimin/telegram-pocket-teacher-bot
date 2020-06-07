@@ -1,8 +1,11 @@
 olx_bot.py
 scraper.py
-tgbot.py
 venv
 venv/*
 .idea
 __pycache__
 .DS_Store
+teacher_bot.py
+teacher_bot_tasks.py
+telegabot.py
+
