@@ -3,18 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="af8941df-9211-48b3-bd8a-7b094bd48442" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/olx_apartments_scraper/ad-bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/olx_apartments_scraper/beautiful_soup_proj.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pocket-teacher-bot/engl_dictionary.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pocket-teacher-bot/idioms.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pocket-teacher-bot/words_scraper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_bot_tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautiful_soup_proj.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/olx_apartments_scraper/beautiful_soup_proj.py" beforeDir="false" afterPath="$PROJECT_DIR$/olx_apartments_scraper/beautiful_soup_proj.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pocket-teacher-bot/tgbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/pocket-teacher-bot/tgbot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegabot.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegabot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +35,7 @@
           <entry key="csv" value="2" />
           <entry key="gitignore" value="3" />
           <entry key="json" value="2" />
-          <entry key="py" value="23" />
+          <entry key="py" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -49,7 +43,7 @@
           <entry key="CSV" value="2" />
           <entry key="JSON" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="23" />
+          <entry key="Python" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -104,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/tgbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
+            <state relative-caret-position="72">
               <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -123,16 +117,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/idioms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
+            <state relative-caret-position="360">
               <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/words_scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="299">
               <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -185,19 +179,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state>
+              <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/.gitignore">
+        <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/engl_dictionary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            <state relative-caret-position="645">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1591530261142" expanded="true" signature="119:121" ph="..." />
+                <marker date="1591530261142" expanded="true" signature="361:367" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -237,11 +236,11 @@
         <option value="$PROJECT_DIR$/olx_apartments_scraper/beautiful_soup_proj.py" />
         <option value="$PROJECT_DIR$/pocket-teacher-bot/wikipedia_scraper.py" />
         <option value="$PROJECT_DIR$/pocket-teacher-bot/token.json" />
-        <option value="$PROJECT_DIR$/pocket-teacher-bot/engl_dictionary.py" />
         <option value="$PROJECT_DIR$/teacher_bot_tasks.py" />
         <option value="$PROJECT_DIR$/pocket-teacher-bot/idioms.py" />
         <option value="$PROJECT_DIR$/pocket-teacher-bot/words_scraper.py" />
         <option value="$PROJECT_DIR$/pocket-teacher-bot/tgbot.py" />
+        <option value="$PROJECT_DIR$/pocket-teacher-bot/engl_dictionary.py" />
       </list>
     </option>
   </component>
@@ -450,20 +449,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="740" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49752474" visible="true" weight="0.26979" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4977064" visible="true" weight="0.26979" />
       <window_info id="Structure" order="1" sideWeight="0.5011236" side_tool="true" weight="0.26979" />
-      <window_info id="Favorites" order="2" sideWeight="0.50247526" side_tool="true" visible="true" weight="0.26979" />
+      <window_info id="Favorites" order="2" sideWeight="0.5022936" side_tool="true" visible="true" weight="0.26979" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.37654322" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.37654322" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.19907407" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3287037" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3287037" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49919224" weight="0.3271605" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49919224" visible="true" weight="0.3271605" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50080776" side_tool="true" weight="0.21296297" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3287037" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -538,25 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/engl_dictionary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1591461187879" expanded="true" signature="119:121" ph="..." />
-            <marker date="1591461187879" expanded="true" signature="361:367" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -627,6 +606,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/engl_dictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1591530261142" expanded="true" signature="119:121" ph="..." />
+            <marker date="1591530261142" expanded="true" signature="361:367" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/teacher_bot_tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -642,24 +640,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/idioms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
+        <state relative-caret-position="360">
           <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/words_scraper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/tgbot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
+        <state relative-caret-position="72">
           <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -667,6 +655,16 @@
             <marker date="1591529694747" expanded="true" signature="2164:2272" ph="..." />
             <marker date="1591529694747" expanded="true" signature="3056:3058" ph="..." />
             <marker date="1591529694747" expanded="true" signature="3603:3883" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pocket-teacher-bot/words_scraper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

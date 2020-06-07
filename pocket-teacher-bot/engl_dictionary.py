@@ -39,10 +39,3 @@ class Dictionary:
                 except KeyError:
                     print('')
         return audio_urls
-
-
-if __name__ == '__main__':
-
-    for meaning in Dictionary('expose').definitions():
-        print(meaning)
-
