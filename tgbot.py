@@ -1,7 +1,12 @@
 import telebot
+from telebot.apihelper import ApiException
 from bs4 import BeautifulSoup
 import requests
 import json
+from words_scraper import Dictionary
+import urllib.request
+from idioms import IDIOMS
+import random
 
 with open('token.json') as json_file:
     token = json.load(json_file)
@@ -13,80 +18,90 @@ bot = telebot.TeleBot(API_TOKEN)
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:76.0) Gecko/20100101 Firefox/76.0'}
 
 
+def get_idiom():
+    idiom = random.choice(IDIOMS)
+    return f'Phrase: \n{idiom[0]}\nMeaning:\n{idiom[1]}'
+
+
+def get_art():
+    url = 'https://random-ize.com/random-art-gallery/'
+    source = requests.get(url,  headers=headers).text
+    soup = BeautifulSoup(source, 'html5lib')
+    picture_link = 'https://random-ize.com' + soup.find('img')['src']
+    picture_name = soup.find('img')['alt']
+    description = soup.find_all('center')[1].div.text
+    # return f'{picture_name}\n{picture_link}\n{description}'
+    return [picture_name, picture_link, description]
+
+
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
-    bot.reply_to(message, """\
-Hi there, Im your Pocket Teacher bot.
-I'm the bot that can teach you some things. For example, I can teach you some english idioms. To learn some just 
-type /idiom (please don't be angry, sometimes I need to read it twice). 
-Moreover, I am knowledgeable about classic art and can introduce you to it as well. Just type /art 
-and I will show you some masterpieces. My creator, @dimazmn programs me to do things whenever he has free time, 
+    keyboard = telebot.types.InlineKeyboardMarkup()
+    keyboard.add(
+        telebot.types.InlineKeyboardButton(
+            'Contact with author', url='telegram.me/dimazmn'
+        )
+    )
+    keyboard.row(telebot.types.InlineKeyboardButton('dictionary', callback_data='get-Dict'))
+    bot.send_message(message.chat.id, """\
+Hi there, I'm Pocket Teacher bot.
+I'm the bot who can teach you various things. For example, I can teach you some english idioms. To learn some of them just 
+type /idiom. I can tell you what do different words mean in English. First, type /dict and then the word. 
+Moreover, I'm knowledgeable about classic art and can introduce you to it as well. Just type /art and I will show you 
+some masterpieces.
+My creator, @dimazmn programs me to do things whenever he has free time, 
 so I will be able to teach you more things in future. Stay tuned!\
-""")
+""", reply_markup=keyboard)
 
 
-def get_idiom():
+@bot.callback_query_handler(func=lambda call: True)
+def callback(query):
+    data = query.data
+    if data.startswith('get-'):
+        get_ex_callback(query)
 
-    url = 'https://randomword.com/idiom'
-
-    source = requests.get(url).text
-
-    soup = BeautifulSoup(source, 'html5lib')
-
-    idiom = soup.find('div', {'id': 'random_word'}).text
-
-    meaning = soup.find('div', {'id': 'random_word_definition'}).text
-
-    return f'Phrase: {idiom}\nMeaning: {meaning}'
+def get_ex_callback(query):
+   bot.answer_callback_query(query.id)
+   dictionary_command(query.message)
 
 
 @bot.message_handler(commands=["idiom"])
 def send_random_idiom(message):
     """/idiom"""
-
+    bot.send_chat_action(message.chat.id, 'typing')
     idiom = get_idiom()
-
-    msg = bot.send_message(message.chat.id, idiom)
-
-    bot.register_next_step_handler(msg, send_idiom)
-
-
-def send_idiom(message):
-    if message.text == "/idiom":
-        bot.send_message(message.chat.id, get_idiom())
-
-
-def get_art():
-
-    url = 'https://random-ize.com/random-art-gallery/'
-
-    source = requests.get(url,  headers=headers).text
-
-    soup = BeautifulSoup(source, 'html5lib')
-
-    picture_link = 'https://random-ize.com' + soup.find('img')['src']
-
-    picture_name = soup.find('img')['alt']
-
-    description = soup.find_all('center')[1].div.text
-
-    return f'{picture_name}\n{picture_link}\n{description}'
+    bot.send_message(message.chat.id, idiom)
 
 
 @bot.message_handler(commands=["art"])
-def send_random_idiom(message):
+def send_random_art(message):
     """/art"""
-
+    bot.send_chat_action(message.chat.id, 'typing')
     art = get_art()
+    bot.send_message(message.chat.id, art[2])
+    bot.send_photo(message.chat.id, art[1])
 
-    msg = bot.send_message(message.chat.id, art)
+@bot.message_handler(commands=['dict'])
+def dictionary_command(message):
+    msg = bot.send_message(message.chat.id, "Just type a word and I tell you what does it mean. "
+                                            "Please use lowercase unless it's not a proper noun")
+    bot.register_next_step_handler(msg, retrieve_word)
 
-    bot.register_next_step_handler(msg, send_art)
 
-
-def send_art(message):
-    if message.text == "/art":
-        bot.send_message(message.chat.id, get_art())
+def retrieve_word(message):
+            bot.send_chat_action(message.chat.id, 'typing')
+            if Dictionary(message.text).audio():
+                audio = urllib.request.urlopen(Dictionary(message.text).audio()[0]).read()
+                try:
+                    bot.send_message(message.chat.id, f'{Dictionary(message.text).definitions()}')
+                    bot.send_audio(message.chat.id, audio)
+                except ApiException and KeyError:
+                    bot.send_message(message.chat.id, "Sorry, I didn't find that word.")
+            else:
+                try:
+                    bot.send_message(message.chat.id, f'{Dictionary(message.text).definitions()}')
+                except ApiException and KeyError:
+                    bot.send_message(message.chat.id, "Sorry, I didn't find that word.")
 
 
 bot.polling(none_stop=True)
