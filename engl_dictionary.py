@@ -39,3 +39,31 @@ class Dictionary:
                 except KeyError:
                     print('')
         return audio_urls
+
+
+
+class GoogleDictAPI:
+
+    source = 'https://api.dictionaryapi.dev/api/v1/entries/en/'
+
+    def __init__(self, word):
+
+        self.url = self.source + word
+
+        self.response = requests.request("GET", self.url)
+
+        self.data = self.response.json()
+
+    def word_origin(self):
+        for word in self.data:
+            return word['origin']
+
+    def synonim(self):
+        synonyms = ''
+        for word in self.data:
+            for meaning in word:
+                return
+
+di = GoogleDictAPI('fly')
+
+print(di.word_origin())
