@@ -59,17 +59,14 @@ class OlxApartmetAds:
     def ad_generator(self):
         for link in self.make_ad_list():
             if self.is_olx_link(link[0]):
-                yield (link[0], (int(link[1]) + int(self.ad_bill(link[0]))))
+                print (link[0], (int(link[1]) + int(self.ad_bill(link[0]))))
 
 
 if __name__ == '__main__':
 
-    ads = OlxApartmetAds(2)
+    ads = OlxApartmetAds()
 
-    print(ads.url)
-    for ad in ads.ad_generator():
-        if ad[1] < 1500:
-            print(ad)
+    print(ads.ad_generator())
 
 
 
