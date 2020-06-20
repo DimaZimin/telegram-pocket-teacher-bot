@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 olx_bot.py
 scraper.py
 venv
@@ -13,3 +14,9 @@ telegabot.py
 =======
 token.json
 >>>>>>> 0b1543fb6cfd4f72555cef8823ffc248e4cd5acf
+=======
+token.json
+engl_dictionary.py
+.idea
+__pycache__
+>>>>>>> 0291cb2ad130d53ee7e6156d3fbe03f2300c7fbb
