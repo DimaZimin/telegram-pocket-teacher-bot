@@ -22,6 +22,21 @@ def add_word(chat_id, word, file):
             else:
                 return "You've already added this word to favorites"
 
+def remove_words(chat_id, file="words_db.json"):
+    with open(file) as json_file:
+        data = json.load(json_file)
+        chats = data["chat_id"]
+        if str(chat_id) in chats.keys():
+            chats[str(chat_id)].clear()
+            write_json(data, file)
+            return "All words have been erased. Press /add_word to add some words."
+        else:
+            return "It seems that you don't have any saved words."
+
+print(remove_words('23513541'))
+
+
+
 
 
 
