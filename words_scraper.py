@@ -5,6 +5,10 @@ with open('token.json') as json_file:
 
 
 class Dictionary:
+    """
+    Word parser. This class retrieves definitions of words and its audio pronunciation (if available)
+     from Dictionary API
+    """
 
     source = "https://lingua-robot.p.rapidapi.com/language/v1/entries/en/"
 
@@ -31,7 +35,7 @@ class Dictionary:
         if definitions:
             return definitions
         else:
-            return "Sorry, I can't find that word"
+            return "Sorry, I can't find this word."
 
     def audio(self):
         audio_urls = []
